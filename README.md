@@ -113,7 +113,7 @@ The jar is created in `target/`.
 
 ### License
 
-Released under the [MIT License](LICENSE). You are free to use, modify, and redistribute this plugin, as long as you keep the original copyright notice and license.
+Released under the [GNU GPL v3.0](LICENSE). You are free to use, modify, and redistribute this plugin, as long as you keep the original copyright notice and license. Any modified version you distribute must also be released as open source under the GPL v3.0.
 
 ---
 
@@ -226,4 +226,4 @@ mvn clean package
 
 ### 授權
 
-以 [MIT License](LICENSE) 釋出。你可以自由使用、修改與再散布，但必須保留原作者的版權聲明與授權文字。
+以 [GNU GPL v3.0](LICENSE) 釋出。你可以自由使用、修改與再散布，但必須保留原作者的版權聲明與授權文字；散布修改後的版本時，也必須以 GPL v3.0 開源。
