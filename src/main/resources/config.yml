@@ -1,0 +1,57 @@
+# 捕捉成功率：1.0 = 百分之百，0.5 = 一半
+capture-chance: 1.0
+
+# 丟空球沒打中任何生物時，是否退還一顆空球（預設 false = 一次性，沒打中就消耗）
+refund-on-miss: false
+
+# 目標不能捕捉（黑名單、有乘客等）時，是否退還空球
+refund-on-invalid: true
+
+# 單隻生物資料長度上限（字元），避免異常巨大的資料塞進物品
+max-data-length: 30000
+
+# 不允許使用捕捉球的世界（填世界資料夾名稱）
+disabled-worlds: []
+
+# 不能捕捉的生物種類（EntityType 名稱，大寫）
+blacklist:
+  - ENDER_DRAGON
+  - WITHER
+  - WARDEN
+  - ELDER_GUARDIAN
+  - GIANT
+  - ILLUSIONER
+
+# 空球外觀。item-model 留空代表用原本雪球的樣子；
+# 想讓它看起來像別的物品，可填原版物品模型，例如 "minecraft:ender_pearl"（不需資源包）
+empty:
+  name: "<white>捕捉球"
+  item-model: ""
+  lore:
+    - "<gray>丟向生物來捕捉牠"
+    - "<dark_gray>一次性道具"
+
+# 裝了生物的球。<mob> 會被換成生物名稱
+filled:
+  name: "<green>捕捉球 <gray>(<white><mob><gray>)"
+  item-model: ""
+  lore:
+    - "<gray>裡面裝著：<white><mob>"
+    - "<gray>丟出去即可放生"
+    - "<dark_gray>放生後球會消失"
+
+messages:
+  captured: "<green>捕捉成功！"
+  failed-chance: "<red>捕捉失敗，球碎掉了。"
+  not-capturable: "<red>這個目標不能捕捉。"
+  blacklisted: "<red>這種生物不能捕捉。"
+  has-vehicle: "<red>牠正在騎乘或被騎乘，無法捕捉。"
+  not-owner: "<red>這是別人的寵物，不能捕捉。"
+  world-disabled: "<red>這個世界不能使用捕捉球。"
+  no-permission: "<red>你沒有使用捕捉球的權限。"
+  data-too-large: "<red>這隻生物的資料太大，無法捕捉。"
+  release-failed: "<red>放生失敗，球已退還給你。"
+  given: "<green>已給予 <white><player> <green>共 <white><amount> <green>顆捕捉球。"
+  reloaded: "<green>CaptureBall 設定已重新載入。"
+  usage: "<yellow>用法：/captureball give <玩家> [數量]  或  /captureball reload"
+  player-not-found: "<red>找不到玩家。"

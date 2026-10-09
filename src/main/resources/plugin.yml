@@ -1,0 +1,25 @@
+name: CaptureBall
+version: 1.0.0
+main: dev.captureball.CaptureBall
+# 如果啟動時報 api-version 不相容，依主控台訊息把這裡改成它要求的版本字串
+api-version: '26.2'
+description: Admin-issued single-use capture balls. Captured mobs are stored in the ball item, never as spawn eggs.
+authors: [ServerOwner]
+
+commands:
+  captureball:
+    description: Give capture balls or reload the config
+    usage: /captureball <give|reload>
+    aliases: [cball]
+    permission: captureball.admin
+
+permissions:
+  captureball.admin:
+    description: Use /captureball (give balls, reload)
+    default: op
+  captureball.use:
+    description: Throw capture balls (capture and release)
+    default: true
+  captureball.bypass:
+    description: Capture other players' tamed pets
+    default: op
